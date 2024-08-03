@@ -22,4 +22,19 @@ npx create-expo-app@latest
 - **components**: Used to store the react components
 - **constants**: used to store the color objects for the application.
 - **Hooks**: Used to store the _react hooks_ for the application.
+
+## React Native fundamentals and Review
+
+- The main React Native components used in react native are `Text, View, ScrollView, Image, TextInput`
+- Each component in react native accepts the variable `style` which can be used to style a jsx component using `object-notation approach`.
+- The `ScrollView` is a type of a `View` component that is used for scrollable content on the screen.
+- The `Flatlist or SectionList` is used to display list items on the view of a mobile application.
+
+## React Native core components
+
+1. **ActivityIndicator**: This is used in react native applications as a loading spin
+2.
+
+## Navigation
+
 -
