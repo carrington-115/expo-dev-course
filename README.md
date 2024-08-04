@@ -33,7 +33,20 @@ npx create-expo-app@latest
 ## React Native core components
 
 1. **ActivityIndicator**: This is used in react native applications as a loading spin
-2.
+2. **Button**: This is used for direct tap actions on the screen. It has properties like: `title, onPress, color, style, disabled`
+3. **Flatlist**: This is used to display items in a list manner. This accepts properties like: `data, renderItem, keyExtractor`. What makes this unique is that each element has a key that can be used to affect a particular element.
+4. **Image**: This is used to display both local and network images. It's 2 main properties are: `style and source`
+5. **ImageBackground**: This component is used for the container background. It has the following properties: `source, resizeMode`
+6. **keyboardAvoidingView**: This component adjusts its height and padding for the purpose that the keyboard is displayed at the bottom. This component takes the property `behaviour - used to set the keyboard sys`. With the `Keyboard` function, the `Keyboard.dismiss` can be used to undisplay the keyboard.
+7. **Modal**: It is a way to present content on an enclosing view. It has the following properties: `animatedType, transparent, visible, onRequestClose`.
+8. **Pressable**: It is a component that can detect press actions on any of its children. It has the following properties: `onPress, onPressIn, onPressOut, onLongPress, `. This component detects the PressIn and PressOut action.
+9. **RefreshControl**: This component is used for the pull down refresh of a component. It takes properties: `refreshing, onRefresh`. The React `useCallback` hook can be use to controll the delay of the refresh.
+10. **SectionList**: It is a component that is used to display elements as a list as `FlatList`. The difference is a header and footer can be passed.
+11. **StatusBar**: This component is used to change the style of the device status bar. The main properties: `barStyle, animated, backgroundColor, showHiddenTransition, hidden`.
+12. **Switch**: It takes the following properties: `trackColor, thumbColor, value, onValueChange`.
+13. **TouchableHighlight, TouchableOpacity**: It is used to change the background color on view. This is used for interactive items on the ui.
+14. **TouchableWithoutFeedback**: It is used for interactive items that the change does not wants to be known when the elements are pressed.
+15.
 
 ## Navigation
 
