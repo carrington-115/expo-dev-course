@@ -117,3 +117,8 @@ export default function RootLayout(){
 ### Tabs Navigation
 
 - This is a navigation pattern where tabs are used as the main method of navigation. The Syntax is same with `Stack` navigation just the keyword changes to `Tabs`
+
+## Dynamic Routes
+
+- A dynamic route is created by wrapping a route's name in `square brackets` for example, `[product].tsx`.
+- The data in dynamic segment depends on the name in the square brackets which can be an id through using route params methods.
