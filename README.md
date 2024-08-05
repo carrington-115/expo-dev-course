@@ -48,6 +48,6 @@ npx create-expo-app@latest
 14. **TouchableWithoutFeedback**: It is used for interactive items that the change does not wants to be known when the elements are pressed.
 15.
 
-## Navigation
+## Navigation in Expo
 
--
+1. **File-based Routing**:
