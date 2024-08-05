@@ -50,4 +50,70 @@ npx create-expo-app@latest
 
 ## Navigation in Expo
 
-1. **File-based Routing**:
+- It is a `file-based` routing system for react native and web applications. It provides native navigation and is built on `react navigation`.
+- Expo file-based navigation can only work inside the `/app directory`. Any file added in this file is a route with the filename its url.
+- For every file, the deault route is the `filename/index.tsx` file.
+
+### \_layout file
+
+- This file is used to specify the shared ui components that can be used among routes.
+- This file is used to setup the splash screen delay, themes,
+
+### The Stack Navigator
+
+- This is a navigation pattern that is similar to web-based navigation.
+- To set stack navigation in `_layout.tsx` file.
+
+```jsx
+import { Stack } from "expo-router";
+
+export default function RootLayout() {
+  return (
+    <Stack
+      screenOptions={
+        {
+          /*pass screen styles*/
+        }
+      }
+    >
+      <Stack.Screen name={routeName} />
+    </Stack>
+  );
+}
+```
+
+### Linking routes
+
+- To link routes in an expo app, we use the `Link` component. By default, `/` is the route for the index page.
+
+```jsx
+import { Link } from "expo-router";
+
+export default function Page() {
+  return <Link href="/">home</Link>;
+}
+```
+
+### Groups
+
+- A group is used to organise similar files in a single folder.
+- Each group has an `_layout.tsx` file and the group folder is name around parentheses. E.g. `(features)`
+- In the main \_layout file, we have to add all nested groups as routes
+
+```jsx
+import {Stack} from 'expo-router'
+
+export default function RootLayout(){
+    return(
+        <Stack>
+        <Stack.Screen name='(features)' />
+
+        </Stack.Screen>
+    )
+}
+
+```
+
+### Tabs Navigation
+
+- This is a navigation pattern where tabs are used as the main method of navigation. The Syntax is same with `Stack` navigation just the keyword changes to `Tabs`
