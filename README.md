@@ -122,3 +122,35 @@ export default function RootLayout(){
 
 - A dynamic route is created by wrapping a route's name in `square brackets` for example, `[product].tsx`.
 - The data in dynamic segment depends on the name in the square brackets which can be an id through using route params methods.
+
+## User Interface
+
+1. **The Splash Screen and App icon**
+
+- The app icon should have the size of _1024px x 1024px_ for ios. Android icons are adaptive icons.
+- All the details of the splash screen can be set in the `app.json` file. When there can be a general setting or there can be a unique setting for each of the platforms.
+
+2. **Safe Areas**
+
+- SafeArea ensure that the app components does not get overlapped by some other device components like status bars or home indicators
+- The component here is the `<SafeArea></SafeArea>`
+
+3. **Fonts**
+
+- To use fonts in expo, we can decide install locally, or through npm like the `@expo-google-font/font` or we can use the `expo-font` plugin to apply multiple fonts in the application.
+
+4. **Assets, colors, animations**
+
+- All assets such as `images, videos, soundes, SQLite databases` are stored in the assets folder.
+- The `useColorScheme` can be used to detect the theme mode of the device and reset the expo app configurations.
+
+```tsx
+import { useColorScheme } from "react-native";
+
+export default function Page() {
+  const colorScheme = useColorScheme();
+  console.log(colorScheme); // 'dark' | 'light'
+}
+```
+
+- For animations in react-native, we can use the `moti` module.
