@@ -154,3 +154,41 @@ export default function Page() {
 ```
 
 - For animations in react-native, we can use the `moti` module.
+
+## Routing in Expo (Advanced and more detailed)
+
+- The `push` property can be added to the `Link` element in a component to make sure the new navigation is being push on the top of the stack.
+- For dynamic routes, the link component needs to be set differently. The `href` receives an object with 2 properties: `pathname` and `params`
+
+```tsx
+import { Link } from "expo-router";
+
+export default function Page() {
+  return (
+    <>
+      <Link
+        push
+        href={{ pathname: "/users/[user]", params: { name: "alice" } }}
+      >
+        ...
+      </Link>
+    </>
+  );
+}
+```
+
+- imperatively, we can do **three** types of navigation, `push, replace, back` with expo-router methods using the `useRouter` hook.
+
+```tsx
+import { useRouter } from "expo-router";
+
+export default function Route() {
+  const router = useRouter();
+  // router.back()
+  // router.replace('/details')
+  // router.push('/user')
+  return {
+    /*component JSX here*/
+  };
+}
+```
