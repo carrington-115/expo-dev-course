@@ -231,4 +231,42 @@ export default function RootLayout(){
 <Tabs.Screen options={{ title: "title", tabIcon: () => <TabIcon /> }} />
 ```
 
-3. Modals Navigator
+## Notes from examples
+
+### Building an image picker
+
+- To build an image picker, we need the `ImagePicker` from `expo-image-picker`. So, first we install `expo-image-picker`.
+
+```bash
+npx expo install expo-image-picker
+```
+
+- Then in the file write a function component to integrate the expo image picker ui component in the app
+
+```tsx
+import * as ImagePicker from "expo-image-picker";
+import { useState } from "react";
+import { Pressable } from "react-native";
+
+export default function ImagePickerComponent() {
+  const [image, setImage] = useState<String | null>(null);
+  const handleImagePicker = async () => {
+    try {
+      const newImage = await ImagePicker.launchImageLibraryAsync({
+        allowEditing: true,
+        quality: 1,
+      });
+      if (!newImage.canceled) {
+        setImage(newImage.assets[0].uri); // passing the image from the device gallery to the react state
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  return (
+    <View>
+      <Pressable onPress={handleimagePicker} />
+    </View>
+  );
+}
+```

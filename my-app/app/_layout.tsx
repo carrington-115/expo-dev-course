@@ -7,7 +7,7 @@ export default function RootLayout() {
       <Stack.Screen name="settings" />
       <Stack.Screen name="(products)" />
       <Stack.Screen
-        name="all"
+        name="modal"
         options={{
           presentation: "modal",
         }}

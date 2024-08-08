@@ -7,7 +7,7 @@ const Settings = () => {
     <SafeAreaView>
       <Text>The settings page</Text>
       <Link href="/">Home</Link>
-      <Link href="/all">Products</Link>
+      <Link href="/modal">Products</Link>
     </SafeAreaView>
   );
 };
