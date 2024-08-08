@@ -192,3 +192,41 @@ export default function Route() {
   };
 }
 ```
+
+## Navigation patterns
+
+1. Stack Navigator
+
+- On `android` the navigation comes from the `top` and on `ios` the navigation comes from the `right`.
+
+### Screen options and Header configurations
+
+- The `<Stack>` component receives an attribute, **screenOptions**, which can be used to set the Stack screen options of the navigation.
+
+```tsx
+import {Stack} from 'expo-router'
+
+export default function RootLayout(){
+  return (
+    <Stack screenOptions={{
+      /* screen options */
+    }}>
+      <Stack.Screen options={{
+        /* route options */
+      }} />
+    </Stack.Screen>
+  )
+}
+```
+
+- For the Screen options, there are 2 types of screen options, header style and screen navigations gesture options. We can pass options like: `headerShown, headerStyle, headerRight, headerLeft, headerStyle, headerBackground`.
+- In the app, we can pass options to the screen like all the header options in the screen options and some other screen navigation options.
+
+2. Tabs Navigator
+
+- This navigation pattern uses a bottom tabs navigation bar are the bottom of the screen to make sure the user navigates to a new screen.
+- Screens in the tabs navigation, `<Tabs.Screen />`, takes an option that is very important for the tabs to set the tab's icon and title.
+
+```tsx
+<Tabs.Screen options={{ title: "title", tabIcon: () => <TabIcon /> }} />
+```

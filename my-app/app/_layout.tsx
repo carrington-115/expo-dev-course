@@ -5,6 +5,7 @@ export default function RootLayout() {
     <Stack>
       <Stack.Screen name="index" />
       <Stack.Screen name="settings" />
+      <Stack.Screen name="(products)" />
     </Stack>
   );
 }
