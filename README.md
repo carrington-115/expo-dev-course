@@ -270,3 +270,17 @@ export default function ImagePickerComponent() {
   );
 }
 ```
+
+### Building a Modal component
+
+- To create the `Modal` we import it from `react-native`.
+- The modal hs some important attributes like: `animationType, transparent, visible`.
+- We can set the the following
+
+```bash
+animationType: 'slide'
+transparent: false
+visble: /* Use a react state variable */
+```
+
+-
