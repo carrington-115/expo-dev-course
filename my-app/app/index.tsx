@@ -16,6 +16,9 @@ const Index = () => {
       <Link style={styles.button} href="/settings">
         Settings
       </Link>
+      <Link style={styles.button} href="/(products)">
+        Products
+      </Link>
     </View>
   );
 };

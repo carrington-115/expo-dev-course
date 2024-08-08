@@ -6,6 +6,12 @@ export default function RootLayout() {
       <Stack.Screen name="index" />
       <Stack.Screen name="settings" />
       <Stack.Screen name="(products)" />
+      <Stack.Screen
+        name="all"
+        options={{
+          presentation: "modal",
+        }}
+      />
     </Stack>
   );
 }

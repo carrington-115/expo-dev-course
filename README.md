@@ -230,3 +230,5 @@ export default function RootLayout(){
 ```tsx
 <Tabs.Screen options={{ title: "title", tabIcon: () => <TabIcon /> }} />
 ```
+
+3. Modals Navigator
