@@ -1,10 +1,12 @@
 import { Link } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, Text, SafeAreaView } from "react-native";
 
 const Index = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <StatusBar style="auto" />
       <Text>Hello world</Text>
       <Text>This is the home page</Text>
       <Text>
@@ -19,7 +21,7 @@ const Index = () => {
       <Link style={styles.button} href="/(products)">
         Products
       </Link>
-    </View>
+    </SafeAreaView>
   );
 };
 

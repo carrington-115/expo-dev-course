@@ -283,4 +283,36 @@ transparent: false
 visble: /* Use a react state variable */
 ```
 
--
+### Adding Gestures
+- Handling gestures in a mobile application is important for providing a good user experience.
+- The React Native gestures library provides components that handle gestures and provide a better user experience.
+- The react native gesture library provide a better way to interact with the native gesture response system.
+- The react native gesture library works with the react native reanimated library. To install them, we can use the command below.
+
+```bash
+npx expo install react-native-gesture-handler react-native-reanimated
+```
+- The `react-native-gesture-handler` provides the gesture handler components and the `react-native-reanimated` provides the animation components.
+- The first step to use the gesture handler is to import the `gesture-handler` in the `app.tsx` file and wrap the `App` component with the `gesture-handler` component.
+
+```tsx
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+
+export default function App() {
+  return (
+    <GestureHandlerRootView>
+      {/* App component here */}
+    </GestureHandlerRootView>
+  );
+}
+```
+- In the component you want to apply gestures to, import the `Animated` from `react-native-reanimated`. This element has the react native animated components. For example, `Animated.View, Animated.Text, Animated.Image`. Furthermore, `Gesture and GestureDetector` are components from `react-native-gesture-handler` used for detecting and handling the gesture; `useShareValue, useAnimatedStyle, useAnimatedGestureHandler` are hooks from `react-native-reanimated` used to build the gesture. The `GestureDetector` wraps the component that needs to be animated.
+
+**Some types of gestures**
+1. *The Tap Gesture*: This gesture is used to detect multiple taps on an element and then use that input to create and animation according to the program.
+2. *The Pan Gesture*: This gesture is used to detect the movement of the finger on the screen (like for recognizing dragging gesture) and then use that input to create an animation according to the program.
+
+### How to build with platform differences
+- To build an application that has different styles for different platforms, we can use the `Platform` module from `react-native`.
+- To detect the type of platform, we can use the `Platform.OS` property. This property returns the type of platform the application is running on. For example, `ios, android, web`.
+
